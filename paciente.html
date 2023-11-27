@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinica Odontologica</title>
+    <link rel="icon" type="image/x-icon" href="./assets/DH_Logo_Black.png">
+    <meta name="description" content="Digital House CTD | Proyecto integrador | BACKEND" />
+
+
+    <!-- ---------------- estilos compartidos ---------------- -->
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- ---------------------- logica aplicada en register -------------------- -->
+    <script src="./scripts/registropaciente.js"></script>
+
+</head>
+
+<body>
+    <header class="container">
+        <nav>
+            <img src="./assets/smile_Logo.png" alt="logo Clinica Smile">
+        </nav>
+    </header>
+
+    <div class="container">
+        <form>
+            <div class="form-header">
+                <h2>Clinica Odontologica</h2>
+                <p class="rounded">Registro de paciente</p>
+            </div>
+
+            <label>Nombre</label>
+            <input id="inputNombre" type="text">
+
+            <label>Apellido</label>
+            <input id="inputApellido" type="text">
+
+            <label>Dni</label>
+            <input id="inputDni" type="number">
+
+            <label>Calle</label>
+            <input id="inputCalle" type="text">
+
+            <label>Numero de calle</label>
+            <input id="inputNumeroCalle" type="number">
+
+            <label>Localidad</label>
+            <input id="inputLocalidad" type="text">
+
+            <label>Provincia</label>
+            <input id="inputProvincia" type="text">
+
+
+            <button type="submit">Registrar Paciente</button>
+        </form>
+
+        <div class="ingresarA">
+            <a href="index.html">Volver al home</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
