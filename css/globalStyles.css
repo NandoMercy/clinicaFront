@@ -6,10 +6,11 @@
   --odonto-green: #30a79d;
   --app-grey: #f2f2f2;
   --azul: #3333ffff;
-  --azul-hover: rgb(40, 40, 197);
+  --azul-hover: rgba(166, 40, 197, 0.573);
   --verde: #00cc7eff;
   --rosa: #ff76e2ff;
-  --lila: #8a6df1ff;
+  --lila: rgb(168, 109, 241);
+  --background-green: #6ec6d0;
 }
 
 * {
