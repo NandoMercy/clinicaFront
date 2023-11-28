@@ -11,6 +11,18 @@ window.addEventListener("load", function () {
 
   const url = "http://localhost:8081/pacientes/registrar";
 
+  // Obtener la fecha actual
+const fechaActual = new Date();
+
+// Formatear la fecha en el formato deseado ("YYYY-MM-DD")
+const dia = String(fechaActual.getDate()).padStart(2, '0');
+const mes = String(fechaActual.getMonth() + 1).padStart(2, '0'); // El mes está basado en cero, por lo que se agrega 1
+const anio = fechaActual.getFullYear();
+
+const fechaFormateada = `${anio}-${mes}-${dia}`;
+
+console.log(fechaFormateada);
+
   /* -------------------------------------------------------------------------- */
   /*            Escuchamos el submit y preparamos el envío           */
   /* -------------------------------------------------------------------------- */
@@ -19,10 +31,11 @@ window.addEventListener("load", function () {
 
     //Cuerpo de la request
     const payload = {
-      firstName: nombre.value,
-      lastName: apellido.value,
+      nombre: nombre.value,
+      apellido: apellido.value,
       dni: dni.value,
-      direccion: {
+      fechaIngreso: fechaFormateada, 
+      domicilioEntradaDto: {
         calle: calle.value,
         numero: numeroCalle.value,
         localidad: localidad.value,
@@ -50,7 +63,7 @@ window.addEventListener("load", function () {
   /* -------------------------------------------------------------------------- */
   function realizarRegister(settings) {
     console.log("Lanzando la consulta a la API");
-    fetch(`${url}/users`, settings)
+    fetch(url, settings)
       .then((response) => {
         console.log(response);
 
@@ -67,7 +80,7 @@ window.addEventListener("load", function () {
           localStorage.setItem("jwt", JSON.stringify(data.jwt));
 
           //redireccionamos a la página
-          location.replace("./turnos.html");
+          location.replace("./index.html");
         }
       })
       .catch((err) => {

@@ -7,9 +7,9 @@ window.addEventListener("load", function () {
   function consultarOdontologos() {
     const settings = {
       method: "GET",
-      headers: {
+     /* headers: {
         authorization: token,
-      },
+      },*/
     };
 
     console.log("Consultando Listado de Odontologos");
@@ -31,8 +31,8 @@ window.addEventListener("load", function () {
     odontologos.forEach((odontologo) => {
       const listItem = document.createElement("li");
       listItem.innerHTML = `
-            <strong>Nombre:</strong> ${odontologo.firstName} <br>
-            <strong>Apellido:</strong> ${odontologo.lastName} <br>
+            <strong>Nombre:</strong> ${odontologo.nombre} <br>
+            <strong>Apellido:</strong> ${odontologo.apellido} <br>
             <strong>Matrícula:</strong> ${odontologo.matricula} <br>
             <hr>
         `;

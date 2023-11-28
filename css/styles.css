@@ -1,14 +1,5 @@
 @import url("globalStyles.css");
 
-body {
-  background-image: url("../assets/wallpaper1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  /* capa sobre fondo */
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.5);
-}
-
 header {
   background-color: var(--odonto-green);
   height: 5rem;
