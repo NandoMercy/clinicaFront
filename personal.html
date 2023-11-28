@@ -14,6 +14,7 @@
 
     <!-- Lógica aplicada para renderizar odontólogos -->
     <script src="./scripts/renderodontologo.js"></script>
+    <script src="./scripts/buscarodontologo.js"></script>
 </head>
 
 <body>
@@ -29,35 +30,46 @@
 
         <div class="odonto-info-container">
 
+            <form id="buscarForm">
+                <div class="form-header">
+                    <h2>Buscar Odontologo</h2>
+                    <p class="rounded">Matricula</p>
+                </div>
+                <input id="inputMatricula" type="text">
+                <button type="submit">Buscar</button>
+            </form>
+
+            <div class="lista-odontologo">
+                <ul id="odontologoInfo"></ul>
+            </div>
+
+
+            <div class="lista-odontologo">
+                <ul id="odontologoDetails"></ul>
+            </div>
+
+
+
+        </div>
+
+        <div class="odonto-info-container">
+
             <h2 class="registro-titulo">Lista de Odontologos</h2>
             <div class="lista-odontologo">
                 <ul id="odontologoDetails"></ul>
-                <table>
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Matrícula</th>
-                    </tr>
-                    <tr>
-                        <td>Fernando</td>
-                        <td>Mercy</td>
-                        <td>123456</td>
-                    </tr>
-                    <tr>
-                        <td>Jose</td>
-                        <td>Alberti</td>
-                        <td>123457</td>
-                    </tr>
-                </table>
             </div>
 
         </div>
 
-        <div class="ingresarA">
-            <a href="index.html">Volver al home</a>
-        </div>
+
+
+
 
     </section>
+
+    <div class="ingresarA">
+        <a href="index.html">Volver al home</a>
+    </div>
 
 </body>
 

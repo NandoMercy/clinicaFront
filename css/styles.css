@@ -1,8 +1,8 @@
 @import url("globalStyles.css");
 
 body {
+  background-image: url(/assets/bannerClinica.png);
   margin: 0;
-  background-color: url("assets\bannerClinica.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -149,6 +149,7 @@ form span {
 .odonto-info-container {
   background-color: var(--odonto-green);
   max-width: 24rem;
+  min-width: 24rem;
   padding: 2rem 3rem;
   margin: 2rem;
   border-radius: 1rem;
