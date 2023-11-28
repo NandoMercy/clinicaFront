@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
   function consultarOdontologos() {
     const settings = {
       method: "GET",
-     /* headers: {
+      /* headers: {
         authorization: token,
       },*/
     };
@@ -24,7 +24,7 @@ window.addEventListener("load", function () {
       .catch((err) => console.log(err));
   }
 
-  function renderizarOdontologos(odontologos) {
+  /* function renderizarOdontologos(odontologos) {
     const odontologoDetailsList = document.getElementById("odontologoDetails");
     const listaOdontologos = document.createElement("ul");
 
@@ -37,8 +37,32 @@ window.addEventListener("load", function () {
             <hr>
         `;
       listaOdontologos.appendChild(listItem);
-    });
+    }); 
 
     odontologoDetailsList.appendChild(listaOdontologos);
+  } */
+
+  function renderizarOdontologos(odontologos) {
+    const odontologoDetailsTable = document.getElementById("odontologoDetails");
+    const tabla = document.createElement("table");
+    const encabezado = document.createElement("tr");
+    encabezado.innerHTML = `
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Matrícula</th>
+    `;
+    tabla.appendChild(encabezado);
+
+    odontologos.forEach((odontologo) => {
+      const fila = document.createElement("tr");
+      fila.innerHTML = `
+            <td>${odontologo.nombre}</td>
+            <td>${odontologo.apellido}</td>
+            <td>${odontologo.matricula}</td>
+        `;
+      tabla.appendChild(fila);
+    });
+
+    odontologoDetailsTable.appendChild(tabla);
   }
 });

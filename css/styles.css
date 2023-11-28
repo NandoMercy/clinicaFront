@@ -1,9 +1,29 @@
 @import url("globalStyles.css");
 
+body {
+  margin: 0;
+  background-color: url("assets\bannerClinica.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(100vh - 5rem);
+}
+
 header {
   background-color: var(--odonto-green);
   height: 5rem;
   margin-bottom: 3rem;
+}
+
+.banner {
+  display: flex;
+  height: calc(100vh - 5rem);
+}
+
+.banner img {
+  width: 100vw; /* Ocupar toda la anchura del viewport */
+  display: block;
+  overflow: hidden;
 }
 
 nav {
@@ -23,10 +43,6 @@ nav h1 span {
 nav img {
   display: block;
   height: 100%;
-}
-
-.container {
-  padding: 0 5%;
 }
 
 form {
@@ -84,26 +100,11 @@ form button:hover {
   background-color: var(--azul-hover);
 }
 
-/* Agrego clases para activar el spinner */
 form button:active {
   background-color: var(--azul-hover);
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.01);
   transform: scale(99%);
 }
-
-form button [disabled] {
-  background-color: rgb(189, 189, 189);
-}
-
-form button img {
-  width: 40px;
-}
-
-.oculto {
-  display: none;
-}
-
-/* Fin de las clases para activar el spinner */
 
 .ingresarA {
   padding: 1rem 0;
@@ -134,18 +135,37 @@ form span {
   display: block;
 }
 
-.login-container {
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+.odonto-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.odonto-info-container {
   background-color: var(--odonto-green);
   max-width: 24rem;
   padding: 2rem 3rem;
+  margin: 2rem;
   border-radius: 1rem;
-  display: flex;
-  margin: 2rem auto;
-  flex-direction: column;
   text-align: center;
 }
 
-.login-container a:hover {
+.info-container {
+  background-color: var(--odonto-green);
+  max-width: 24rem;
+  padding: 2rem 3rem;
+  margin: 2rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.info-container a:hover {
   color: var(--lila);
 }
 
@@ -160,4 +180,22 @@ form span {
   color: var(--app-grey);
   font-size: 1.2rem;
   text-decoration: none;
+}
+
+table {
+  width: 100%;
+  margin-top: 10px;
+}
+
+th,
+td {
+  border: 1.2px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #594e4e5e;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
