@@ -94,10 +94,10 @@ form button {
   background-color: var(--lila);
   color: white;
   padding: 0.8rem 0;
-  border-radius: 0.3rem;
+  border-radius: 0.5rem;
   font-size: 1rem;
   font-weight: 400;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 form button:hover {
@@ -127,16 +127,6 @@ form button:active {
 form span {
   padding-bottom: 20px;
   text-align: center;
-}
-
-.invalid {
-  border: solid 2px red;
-  box-shadow: 0 0 10px red;
-}
-
-.error {
-  color: red;
-  display: block;
 }
 
 .main-container {
@@ -204,4 +194,9 @@ th {
   background-color: #594e4e5e;
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+.busqueda-container {
+  display: flex;
+  flex-direction: row;
 }
