@@ -4,9 +4,6 @@ document.addEventListener("submit", function (event) {
   const url = "http://localhost:8081/odontologos/";
 
   var odontologoId = document.getElementById("inputOdontologoId").value;
-  var odontologoMatricula = document.getElementById(
-    "inputOdontologoMatricula"
-  ).value;
 
   buscarOdontologoPorId(odontologoId);
 
