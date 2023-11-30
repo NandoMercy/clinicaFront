@@ -5,6 +5,9 @@ document.addEventListener("submit", function (event) {
 
   var odontologoId = document.getElementById("inputOdontologoId").value;
 
+  const odontologoInfo = document.getElementById("odontologoInfoId");
+  odontologoInfo.innerHTML = "";
+
   buscarOdontologoPorId(odontologoId);
 
   function buscarOdontologoPorId(odontologoId) {
@@ -15,20 +18,18 @@ document.addEventListener("submit", function (event) {
       },
     })
       .then((response) => response.json())
-      .then((data) => {
-        renderizarInfo(data);
+      .then((odontologo) => {
+        renderizarInfo(odontologo);
       })
       .catch((error) => {
         console.error("Error al buscar odontólogo:", error);
       });
   }
 
-  function renderizarInfo(odontologos) {
-    var odontologoInfoTabla = document.getElementById("odontologoInfo");
-    odontologoInfoTabla.innerHTML = "";
-
-    var tabla = document.createElement("table");
-    var encabezado = document.createElement("tr");
+  function renderizarInfo(odontologo) {
+    const odontologoInfoId = document.getElementById("odontologoInfoId");
+    const tabla = document.createElement("table");
+    const encabezado = document.createElement("tr");
     encabezado.innerHTML = `
         <th>Nombre</th>
         <th>Apellido</th>
@@ -36,8 +37,8 @@ document.addEventListener("submit", function (event) {
     `;
     tabla.appendChild(encabezado);
 
-    odontologos.forEach((odontologo) => {
-      var fila = document.createElement("tr");
+    odontologo.forEach((odontologo) => {
+      const fila = document.createElement("tr");
       fila.innerHTML = `
             <td>${odontologo.nombre}</td>
             <td>${odontologo.apellido}</td>
@@ -46,6 +47,6 @@ document.addEventListener("submit", function (event) {
       tabla.appendChild(fila);
     });
 
-    odontologoInfoTabla.appendChild(tabla);
+    odontologoInfoId.appendChild(tabla);
   }
 });

@@ -50,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((data) => {
         console.log("Turno tomado con éxito:", data);
+        const mensaje = `Se ha registrado un turno:\n\nPaciente: ${data.paciente.nombre} ${data.paciente.apellido}\nOdontólogo: ${data.odontologo.nombre} ${data.odontologo.apellido}\nHorario: ${data.fechayHora}`;
+        alert(mensaje);
       })
       .catch((error) => {
         console.error("Error al tomar el turno:", error);

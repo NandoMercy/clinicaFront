@@ -15,6 +15,7 @@
     <!-- Lógica aplicada para renderizar odontólogos -->
     <script src="./scripts/renderodontologo.js"></script>
     <script src="./scripts/buscarodontologo.js"></script>
+    <script src="./scripts/buscarodontologomatricula.js"></script>
 </head>
 
 <body>
@@ -27,31 +28,64 @@
         </nav>
     </header>
 
-
-    <section class="odonto-container">
-
+    <div class="odonto-container">
         <div class="odonto-info-container">
-
-            <form id="buscarFormId">
-                <div class="form-header">
-                    <h2>Buscar Odontologo</h2>
-                    <p class="rounded">Busqueda por id</p>
-                </div>
-                <label for="inputOdontologoId">ID de odontologo</label>
-                <input id="inputOdontologoId" type="number">
-
-                <button type="submit">Buscar</button>
-            </form>
-
-            <div class="lista-odontologo">
-                <ul id="odontologoInfo">
-                </ul>
-
-            </div>
-
-
-
+            <h2 class="registro-titulo">Buscar Odontologo</h2>
         </div>
+    </div>
+
+    <section class="main-container">
+
+
+
+        <article class="odonto-container">
+
+
+            <div class="odonto-info-container">
+
+                <form id="buscarFormId">
+                    <div class="form-header">
+
+                        <p class="rounded">Busqueda por id</p>
+                    </div>
+                    <label for="inputOdontologoId">ID de odontologo</label>
+                    <input id="inputOdontologoId" type="number">
+
+                    <button type="submit">Buscar</button>
+                </form>
+
+                <div class="lista-odontologo">
+                    <ul id="odontologoInfoId">
+                    </ul>
+
+                </div>
+            </div>
+        </article>
+
+        <article class="odonto-container">
+
+            <div class="odonto-info-container">
+
+                <form id="buscarFormMatricula">
+                    <div class="form-header">
+                        <p class="rounded">Busqueda matricula</p>
+                    </div>
+                    <label for="inputOdontologoMatricula">Matricula Odontologo</label>
+                    <input id="inputOdontologoMatricula" type="number">
+
+                    <button type="submit">Buscar</button>
+                </form>
+
+                <div class="lista-odontologo">
+                    <ul id="odontologoInfoMatricula">
+                    </ul>
+
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <article class="odonto-container">
 
         <div class="odonto-info-container">
 
@@ -59,14 +93,11 @@
             <div class="lista-odontologo">
                 <ul id="odontologoDetails"></ul>
             </div>
-
         </div>
+    </article>
 
 
 
-
-
-    </section>
 
     <div class="ingresarA">
         <a href="index.html">Volver al home</a>

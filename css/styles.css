@@ -145,7 +145,7 @@ form span {
   max-width: 24rem;
   min-width: 24rem;
   padding: 2rem 3rem;
-  margin: 2rem;
+  margin: 1.5rem;
   border-radius: 1rem;
   text-align: center;
 }
@@ -199,4 +199,8 @@ th {
 .busqueda-container {
   display: flex;
   flex-direction: row;
+}
+
+.busqueda-titulo {
+  text-align: center;
 }
