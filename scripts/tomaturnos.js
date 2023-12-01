@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const turnoData = {
       paciente: parseInt(pacienteId),
       odontologo: parseInt(odontologoId),
-      fechayHora: fechaHora,
+      fechaYHora: fechaHora,
     };
 
     // POST TURNOS
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.json())
       .then((data) => {
         console.log("Turno tomado con éxito:", data);
-        const mensaje = `Se ha registrado un turno:\n\nPaciente: ${data.paciente.nombre} ${data.paciente.apellido}\nOdontólogo: ${data.odontologo.nombre} ${data.odontologo.apellido}\nHorario: ${data.fechayHora}`;
+        const mensaje = `Se ha registrado un turno:\n\nPaciente: ${data.paciente.nombre} ${data.paciente.apellido}\nOdontólogo: ${data.odontologo.nombre} ${data.odontologo.apellido}\nHorario: ${data.fechaYHora}`;
         alert(mensaje);
       })
       .catch((error) => {

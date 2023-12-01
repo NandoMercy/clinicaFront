@@ -20,11 +20,13 @@ document.addEventListener("submit", function (event) {
       .then((response) => response.json())
       .then((odontologo) => {
         renderizarInfo(odontologo);
+
       })
       .catch((error) => {
         console.error("Error al buscar odontólogo:", error);
       });
   }
+  
 
   function renderizarInfo(odontologo) {
     const odontologoInfoId = document.getElementById("odontologoInfoId");
@@ -36,8 +38,6 @@ document.addEventListener("submit", function (event) {
         <th>Matrícula</th>
     `;
     tabla.appendChild(encabezado);
-
-    odontologo.forEach((odontologo) => {
       const fila = document.createElement("tr");
       fila.innerHTML = `
             <td>${odontologo.nombre}</td>
@@ -45,7 +45,6 @@ document.addEventListener("submit", function (event) {
             <td>${odontologo.matricula}</td>
         `;
       tabla.appendChild(fila);
-    });
 
     odontologoInfoId.appendChild(tabla);
   }
